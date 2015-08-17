@@ -1,0 +1,13 @@
+/*
+
+* Override Pages default styles or create your own styles here
+
+*/
+span.orcrcle
+{
+	background-color: #006699;
+	border-radius: 25px;
+	color: white;
+}
+
+
