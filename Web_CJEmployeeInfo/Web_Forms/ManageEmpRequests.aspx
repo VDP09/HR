@@ -25,68 +25,7 @@
             BEHAVIOR: url("mask_vbs.htc");
         }
     </style>
-    <script language="javascript">
-
-        function ValidateData() {
-            var txtEmpClockId;
-
-            txtEmpClockId = document.getElementById("txtEmpClockId");
-
-            if (txtEmpClockId.value - 0 != txtEmpClockId.value) {
-                alert('Invalid Clock Id .. Please check it out');
-                return false;
-            }
-
-
-            return true;
-        }
-
-        function DisplayHelpWin() {
-            var strURL;
-
-            //alert('Rupesh');
-            strURL = 'CJ HR Express_UG.htm';
-            window.open(strURL, '20', 'resizable=no,top=5, left=5, width=750,height=560,scrollbars=yes,menubar=no,toolbar=no');
-        }
-
-        function OpenOAMoveWin() {
-            var strURL;
-
-            strURL = 'MoveOATemp.aspx';
-            window.open(strURL, '21', 'resizable=no,top=5, left=5, width=690,height=450,scrollbars=yes,menubar=no,toolbar=no');
-        }
-
-        function OpenNewWin(i) {
-            var strURL;
-
-            //alert(txtStore.value);
-            //return false;
-
-            var txtStore;
-
-            txtStore = document.getElementById("txtStore");
-
-            if (i == 1)	//Edit Punch Window
-            {
-                strURL = 'EmpEditPunch.aspx?Unit=' + frmMER.txtUnit.value +
-                    '&ManCId=' + frmMER.txtManClockId.value +
-                    '&SC=' + frmMER.txtSecCode.value;
-
-                window.open(strURL, 'wEditPunch', 'resizable=no,top=5, left=5, width=810,height=650,scrollbars=yes,menubar=no,toolbar=no');
-            }
-
-            else if (i == 2)	//Submit Payroll window
-            {
-                strURL = 'SubmitPayroll.aspx?Unit=' + frmMER.txtUnit.value +
-                    '&ManCId=' + frmMER.txtManClockId.value +
-                    '&SC=' + frmMER.txtSecCode.value;
-
-                window.open(strURL, 'wSubmitPrl', 'resizable=no,top=5, left=5, width=680,height=500,scrollbars=yes,menubar=no,toolbar=no');
-            }
-        }
-
-    </script>
-
+   
 
     <form id="form1" runat="server">
 
@@ -137,7 +76,7 @@
                             <div class="col-sm-3">
                                 <%--<form role="form">--%>
                                 <div class="form-group ">
-                                    <asp:TextBox ID="txtEmpClockId" CssClass="form-control" runat="server" Width="150px"></asp:TextBox>
+                                    <asp:TextBox ID="txtEmpClockId" CssClass="form-control" runat="server" Width="150px" ClientIDMode="Static"></asp:TextBox>
                                 </div>
                                 <%-- </form>--%>
                             </div>
@@ -324,7 +263,7 @@
                     <asp:TextBox ID="txtLoadForm" runat="server" Style="display: none;"></asp:TextBox>
                     <asp:TextBox ID="txtManClockId" runat="server" Style="display: none;"></asp:TextBox>
                     <asp:TextBox ID="txtQH" runat="server" Style="display: none;"></asp:TextBox>
-                    <asp:TextBox ID="txtSecCode" runat="server" Style="display: none;"></asp:TextBox>
+                    <asp:TextBox ID="txtSecCode" runat="server" Style="display: none;" Text="1"></asp:TextBox>
                     <asp:TextBox ID="txtUnit" runat="server" Style="display: none;"></asp:TextBox>
                 </div>
 
@@ -349,6 +288,7 @@
 
 
     </form>
+     <script src="../Scripts/WebForms/ManageEmpRequests.aspx.js"></script>
 
 </asp:Content>
 

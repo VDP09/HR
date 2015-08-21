@@ -1383,6 +1383,7 @@
     <Content Include="pages\js\pages.social.js" />
     <Content Include="pages\js\pages.social.min.js" />
     <Content Include="Scripts\NumberFormat.js" />
+    <Content Include="Scripts\WebForms\ManageEmpRequests.aspx.js" />
     <Content Include="Web_Forms\ChangeEFT.aspx" />
     <Content Include="Web_Forms\ChangeI9.aspx" />
     <Content Include="Web_Forms\ChangeNameAdd.aspx" />
